@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "MyWebAppDB": "Server=localhost;UserId=root;Password=;Database=MyWebAppDB;"
+  }
+}
