@@ -1,5 +1,7 @@
-﻿using SimUDuck.Patos;
+﻿using SimUDuck.Fabrica;
+using SimUDuck.Patos;
 using System;
+using System.Collections.Generic;
 
 namespace SimUDuck
 {
@@ -7,6 +9,18 @@ namespace SimUDuck
     {
         static void Main(string[] args)
         {
+            FabricaPatos<PatoSelvagem> fabricaPatos = new FabricaPatos<PatoSelvagem>();
+            Simulador simulador = new Simulador();
+
+            var patos = fabricaPatos.ObterPatos();
+
+            foreach(var pato in patos)
+            {
+                simulador.Executar(pato);
+            }
+
+            Console.ReadLine();
+
             //Pato patoSelvagem = new PatoSelvagem();
             //Console.WriteLine("Pato Selvagem");
             //patoSelvagem.Grasnar();
@@ -22,15 +36,15 @@ namespace SimUDuck
             //patoCabecaVermelha.Nadar("cachorrinho");
             //patoCabecaVermelha.Andar(); // Classe "Pato" não contém uma definição do método Andar
 
-            Simulador simulador = new Simulador();
-            simulador.Executar(new PatoSelvagem("Pato Selvagem"));
-            simulador.Executar(new PatoCabecaVermelha("Pato Cabeça Vermelha"));
-            simulador.Executar(new PatoReal("Pato Real"));
+            //Simulador simulador = new Simulador();
+            //simulador.Executar(new PatoSelvagem("Pato Selvagem"));
+            //simulador.Executar(new PatoCabecaVermelha("Pato Cabeça Vermelha"));
+            //simulador.Executar(new PatoReal("Pato Real"));
 
-            PatoReal patoReal = new PatoReal("Pato Real");
-            PatoSelvagem patoSelvagem = new PatoSelvagem("Pato Selvagem");
+            //PatoReal patoReal = new PatoReal("Pato Real");
+            //PatoSelvagem patoSelvagem = new PatoSelvagem("Pato Selvagem");
 
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }
