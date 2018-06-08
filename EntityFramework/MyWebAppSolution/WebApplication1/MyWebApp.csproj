@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\ts\principal.ts" />
     <Content Remove="wwwroot\ts\produto.ts" />
   </ItemGroup>
 
@@ -15,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\ts\principal.ts" />
     <TypeScriptCompile Include="wwwroot\ts\produto.ts" />
   </ItemGroup>
 

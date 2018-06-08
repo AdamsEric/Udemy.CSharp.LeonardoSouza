@@ -1,6 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Produto = /** @class */ (function () {
-    function Produto() {
+    function Produto(sigla, preco) {
+        this.sigla = sigla;
+        this.preco = preco;
     }
+    Produto.prototype.exibirSigla = function () {
+        alert(this.sigla);
+    };
     Produto.prototype.obterNome = function () {
         return this.nome;
     };
@@ -18,5 +25,5 @@ var Produto = /** @class */ (function () {
     });
     return Produto;
 }());
-var produto = new Produto();
+exports.Produto = Produto;
 //# sourceMappingURL=produto.js.map
